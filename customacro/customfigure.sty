@@ -1,0 +1,17 @@
+\usepackage{subcaption}
+\usepackage{wrapfig2}
+
+\renewcommand{\figurename}{Figure~}
+
+\jlreqsetup{
+  caption_font=\normalfont,
+  caption_label_font=\normalfont,
+}
+
+\newcommand{\customwrapfigure}[4]{
+  \begin{wrapfigure}{#4}{#3}
+    \vspace*{-\intextsep}
+    \includegraphics[width=#3]{#1}
+    \caption{#2}
+  \end{wrapfigure}
+}

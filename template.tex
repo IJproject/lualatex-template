@@ -1,13 +1,81 @@
-% \documentclass[fontsize=11pt,jafontscale=0.925,titlepage]{jlreq}
-\documentclass[fontsize=11pt,jafontscale=0.925]{jlreq}
-\usepackage{./customacro/macro}
+\documentclass[book,openany,fontsize=11pt,jafontscale=0.925,titlepage]{jlreq}
+% \documentclass[fontsize=11pt,jafontscale=0.925]{jlreq}
+\usepackage{mathtools,amssymb}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage[hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+\usepackage{./customacro/customcodeblock}
+\usepackage{./customacro/customfigure}
+
+\renewcommand{\chapter}{
+  \addtocontents{toc}{\vspace{10pt}} % 目次に余白を追加
+  \secdef\@chapter\@schapter
+}
 
 \begin{document}
-bhjhjj
-\太字テスト
+
+\include{pages/titlepage}
+
+\tableofcontents
+\newpage
+
+\chapter{テストですよ}
+\section{テスト}
+\subsection{テストテスト}
+\subsubsection{テストテストテスト}
 
 \begin{equation}
 E = mc^2
 \end{equation}
+
+コードブロックは以下のように書きます。
+\href{https://google.com}{Google}へのリンクです。
+
+\begin{customcodeframe}{titletitle}
+  \begin{customcodecontents}
+    # テストffff
+    MAGMOM = csacsa
+    LSORBIT # a店の売上death
+  \end{customcodecontents}
+\end{customcodeframe}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=5cm]{./IMG_1531.jpeg}
+  \caption{caption}
+  \label{fig:label}
+\end{figure}
+
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+\customwrapfigure{./IMG_1531.jpeg}{回り込みする図}{5cm}{r}
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+橋元さんの売上はどうですか？
+
+\chapter{テストですよ}
+\section{テスト}
+
+\chapter{テストですよ}
+\section{テスト}
+
+
+\cite{test}は参考文献です。外部ファイルから読み込める？csa
+
+\appendix
+
+\chapter{テストですよ}
+\section{テスト}
+
+\include{pages/bibliography}
+
+% \begin{thebibliography}{99}
+%   \bibitem{test} test
+% \end{thebibliography}
 
 \end{document}

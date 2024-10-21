@@ -1,0 +1,42 @@
+% treatment
+% \begin{codeframe}{title}
+%   \begin{codecontents}
+%     code
+%   \end{codecontents}
+% \end{codeframe}
+
+\usepackage[breakable]{tcolorbox}
+\usepackage{listings}
+
+\lstnewenvironment{customcodecontents}
+  {\lstset{
+      basicstyle=\ttfamily,
+      tabsize=2,
+      extendedchars=true,
+      breaklines=true,
+      xleftmargin=-20pt,
+      xrightmargin=-24pt,
+      lineskip=-4pt,
+  }
+}{}
+
+\newenvironment{customcodeframe}[1]
+  {
+    \begin{tcolorbox}[
+      colframe=black!70,
+      colback=white,
+      colbacktitle=black!70,
+      coltitle=white,
+      fonttitle=\ttfamily,
+      title=#1,
+      boxsep=6pt,
+      top=-4pt,
+      bottom=-4pt,
+      left=2pt,
+      enlarge top by=4pt,
+      enlarge bottom by=4pt,
+    ]
+  }
+  {
+    \end{tcolorbox}
+  }
